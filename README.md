@@ -3,11 +3,12 @@
 테스팅 환경 <br>
     MacBook Pro 16(m1 chip) Ventura 13.5.2(22G91)
     
-사용방법 <br>
-0. 가상환경 설정 <br>
+가상환경 설정 <br>
     a. 상위 폴더에서, terminal에 conda env create --file environment.yaml를 입력합니다. <br>
     b. conda activate fv2_reprod를 입력합니다. <br>
     c. python interpreter 경로를 fv2_reprod로 변경합니다. <br>
+
+사용방법 <br>
 
 1. Active Liveness detection <br>
     liveness_detection_by_face_rotation_task.py를 실행한 뒤, 브라우저로 127.0.0.1:8000 로 접근합니다. <br>
