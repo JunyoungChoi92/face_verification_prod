@@ -16,7 +16,7 @@ TASK_COMPLETION_TIME = None
 latest_cropped_face = None
 face_processed = False
 distance_str = -2
-index_folder_path = "/Users/root1/Desktop/face_verif/verification_demo/indexes"
+index_folder_path = "./indexes"
 index_file_name = index_folder_path + "/sample_valid.index"
 
 app = Flask(__name__)
@@ -99,7 +99,8 @@ def generate_ROI():
             face_processed = True
 
             annotated_image = out[:, :, ::-1]
-            ret, jpeg = cv2.imencode('.jpg', cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+
+            ret, jpeg = cv2.imencode('.jpg', cv2.cvtColor(out, cv2.COLOR_BGR2RGB))
             if not ret:
                 continue
             
@@ -117,7 +118,7 @@ def generate_ROI():
 def generate_similar_image():
     global face_processed, latest_cropped_face, distance_str, index_file_name
     database = []
-    default_path = "/Users/root1/Desktop/face_verif/verification_demo/dataset/Validation/1888-2037"
+    default_path = "./dataset/Validation/1888-2037"
     dimension = 1280
     img_pathes = extract_path(default_path)
 
@@ -150,7 +151,7 @@ def generate_similar_image():
 
 def embed_image_from_ndarray(img):
     base_options = mp.tasks.BaseOptions(
-        model_asset_path="/Users/root1/Desktop/face_verif/verification_demo/models/mobilenet_v3_large.tflite"
+        model_asset_path="./models/mobilenet_v3_large.tflite"
     )
     l2_normalize = True
     quantize = True
@@ -167,7 +168,7 @@ def embed_image_from_ndarray(img):
     
 def embed_image(img):
     base_options = mp.tasks.BaseOptions(
-        model_asset_path="/Users/root1/Desktop/face_verif/verification_demo/models/mobilenet_v3_large.tflite"
+        model_asset_path="./models/mobilenet_v3_large.tflite"
     )
     l2_normalize = True
     options = mp.tasks.vision.ImageEmbedderOptions(
@@ -233,7 +234,7 @@ def similar_image_feed():
 @app.route('/get_distance')
 def get_distance():
     global distance_str
-    return distance_str
+    return str(distance_str)
 
 @app.route('/')
 def index():

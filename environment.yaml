@@ -1,4 +1,4 @@
-name: fv_reprod
+name: fv2_reprod
 channels:
   - pytorch
   - defaults

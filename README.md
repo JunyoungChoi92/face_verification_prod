@@ -7,6 +7,7 @@
 0. 가상환경 설정
     a. 상위 폴더에서, terminal에 conda env create --file environment.yaml를 입력합니다.
     b. conda activate fv2_reprod를 입력합니다.
+    c. python interpreter 경로를 fv2_reprod로 변경합니다.
 
 1. Active Liveness detection
     liveness_detection_by_face_rotation_task.py를 실행한 뒤, 브라우저로 127.0.0.1:8000 로 접근합니다.
