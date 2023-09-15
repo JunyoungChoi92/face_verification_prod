@@ -14,7 +14,7 @@
 1. Active Liveness detection <br>
     liveness_detection_by_face_rotation_task.py를 실행한 뒤, 브라우저로 127.0.0.1:8000 로 접근합니다. <br>
 
-2. 얼굴 검색 <br>
+2. Face ROI 추출 및 검색 <br>
     a. dataset 폴더에 Validation을 위한 한국인 Face 데이터셋(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=161 중 Validation folder)을 다운로드 받아 넣습니다. <br>
     b. search_for_my_face.py를 실행한 뒤, 브라우저로 127.0.0.1:8000 로 접근합니다. <br>
 
