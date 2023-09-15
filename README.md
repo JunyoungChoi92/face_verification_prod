@@ -1,4 +1,4 @@
-얼굴 인증 과정 module의 reproduction 페이지입니다.
+<h2>얼굴 인증 과정 module의 reproduction 페이지입니다.</h2>
 
 테스팅 환경
     MacBook Pro 16(m1 chip) Ventura 13.5.2(22G91)
