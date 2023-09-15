@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Stream</title>
+</head>
+<body>
+    <h1>Video Stream</h1>
+    <div>
+        <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+    <div>
+        <h2 id="distance">Distance: Not yet calculated</h2>
+    </div>
+    <div>
+        <img src="{{ url_for('similar_image_feed') }}" alt="Similar Image">
+    </div>
+
+
+    <script>
+        function updateDistance() {
+            fetch('/get_distance')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('distance').textContent = data;
+                });
+        }
+
+        window.onload = function() {
+            setInterval(updateDistance, 1000);
+        };
+    </script>
+</body>
+</html>
