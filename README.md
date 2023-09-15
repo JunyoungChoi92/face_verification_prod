@@ -4,9 +4,9 @@
     MacBook Pro 16(m1 chip) Ventura 13.5.2(22G91)
     
 가상환경 설정 <br>
-    a. 상위 폴더에서, terminal에 conda env create --file environment.yaml를 입력합니다. <br>
-    b. conda activate fv2_reprod를 입력합니다. <br>
-    c. python interpreter 경로를 fv2_reprod로 변경합니다. <br>
+    1. 상위 폴더에서, terminal에 conda env create --file environment.yaml를 입력합니다. <br>
+    2. conda activate fv2_reprod를 입력합니다. <br>
+    3. python interpreter 경로를 fv2_reprod로 변경합니다. <br>
 
 사용방법 <br>
 
